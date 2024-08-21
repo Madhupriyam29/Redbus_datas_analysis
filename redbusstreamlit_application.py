@@ -1,3 +1,4 @@
+	
 import mysql.connector
 import pandas as pd
 import streamlit as st
@@ -54,6 +55,7 @@ def main():
     min_price, max_price = float(df['prices'].min()), float(df['prices'].max())
     price_range = st.sidebar.slider('Price Range', min_price, max_price, (min_price, max_price))
 
+
     # Star rating filter
     min_star_rating, max_star_rating = float(df['star_ratings'].min()), float(df['star_ratings'].max())
     star_rating = st.sidebar.slider('Minimum Star Rating', min_star_rating, max_star_rating, min_star_rating)
@@ -77,4 +79,5 @@ if __name__ == '__main__':
     main()
 
 # Close the connection when done
-conn.close()
+conn.close()  
+	
